@@ -57,7 +57,11 @@ class _NavigationBarLayoutState extends State<NavigationBarLayout> {
 
   final List<Widget> _screens = [
     const HomeView(),
+<<<<<<< HEAD
     const BurgerView(),
+=======
+    const BurgerView(), // Shop screen
+>>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
     const CartView(),
   ];
 
@@ -77,7 +81,11 @@ class _NavigationBarLayoutState extends State<NavigationBarLayout> {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
+<<<<<<< HEAD
               color: Colors.black.withValues(alpha: .15),
+=======
+              color: Colors.black.withOpacity(0.15),
+>>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
               blurRadius: 4,
               offset: const Offset(0, -2),
             ),
@@ -85,9 +93,13 @@ class _NavigationBarLayoutState extends State<NavigationBarLayout> {
         ),
         navBarStyle: NavBarStyle.style1,
         onItemSelected: (index) {
+<<<<<<< HEAD
           setState(() {
             widget.shell.goBranch(index);
           });
+=======
+          widget.shell.goBranch(index);
+>>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
         },
       ),
     );

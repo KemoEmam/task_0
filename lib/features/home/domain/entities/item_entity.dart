@@ -37,6 +37,7 @@ final List<ItemEntity> products = List.generate(10, (index) {
 final List<ItemEntity> juices = [
   ItemEntity(
     name: 'Malteadas tropicales',
+<<<<<<< HEAD
     image: AppImages.imagesStrawberryJuice,
     description: 'Salsa clásica de la casa',
     price: 11.58,
@@ -44,9 +45,21 @@ final List<ItemEntity> juices = [
   ),
   ItemEntity(
     name: 'Malteadas tropicales',
+=======
+>>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
     image: AppImages.imagesOrageJuice,
     description: 'Elaborado con jugos naturales',
     price: 5.99,
     title: 'Naturales',
   ),
+<<<<<<< HEAD
+=======
+  ItemEntity(
+    name: 'Malteadas tropicales',
+    image: AppImages.imagesStrawberryJuice,
+    description: 'Salsa clásica de la casa',
+    price: 11.58,
+    title: 'Naturales',
+  ),
+>>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
 ];
