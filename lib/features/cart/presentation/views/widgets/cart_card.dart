@@ -6,10 +6,37 @@ import 'package:task/core/themes/styles/app_text_styles.dart';
 import 'package:task/features/cart/domain/entities/cart_entity.dart';
 import 'package:task/features/home/presentation/views/widgets/custom_card.dart';
 
-class CartCard extends StatelessWidget {
+class CartCard extends StatefulWidget {
   final CartEntity cartEntity;
 
   const CartCard({super.key, required this.cartEntity});
+
+  @override
+  State<CartCard> createState() => _CartCardState();
+}
+
+class _CartCardState extends State<CartCard> {
+  late int quantity;
+
+  @override
+  void initState() {
+    super.initState();
+    quantity = widget.cartEntity.quantity;
+  }
+
+  void _increment() {
+    setState(() {
+      quantity++;
+    });
+  }
+
+  void _decrement() {
+    if (quantity > 1) {
+      setState(() {
+        quantity--;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +49,10 @@ class CartCard extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.all(18.w),
             child: Column(
-              spacing: 2.h,
               children: [
                 CircleAvatar(
                   radius: 47.r,
-                  backgroundImage: AssetImage(cartEntity.image),
+                  backgroundImage: AssetImage(widget.cartEntity.image),
                 ),
                 SizedBox(height: 8.h),
                 Text(
@@ -53,43 +79,51 @@ class CartCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xffF3F3F3),
-                        borderRadius: BorderRadius.circular(8.r),
-                      ),
-                      child: Icon(
-                        Icons.remove,
-                        color: AppColors.primary,
-                        size: 26.w,
+                    GestureDetector(
+                      onTap: _decrement,
+                      child: Container(
+                        padding: EdgeInsets.all(4.w),
+                        decoration: BoxDecoration(
+                          color: const Color(0xffF3F3F3),
+                          borderRadius: BorderRadius.circular(8.r),
+                        ),
+                        child: Icon(
+                          Icons.remove,
+                          color: AppColors.primary,
+                          size: 26.w,
+                        ),
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 8.w),
                       child: Text(
-                        "${cartEntity.quantity}",
+                        "$quantity",
                         style: AppTextStyles.segoeUiRegular14,
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(4.w),
-                      decoration: BoxDecoration(
-                        color: AppColors.primary,
-                        border: Border.all(color: AppColors.primaryText),
-                        borderRadius: BorderRadius.circular(8.r),
-                      ),
-                      child: Icon(
-                        Icons.add,
-                        color: Colors.white,
-                        size: 21.w,
+                    GestureDetector(
+                      onTap: _increment,
+                      child: Container(
+                        padding: EdgeInsets.all(4.w),
+                        decoration: BoxDecoration(
+                          color: AppColors.primary,
+                          border: Border.all(color: AppColors.primaryText),
+                          borderRadius: BorderRadius.circular(8.r),
+                        ),
+                        child: Icon(
+                          Icons.add,
+                          color: Colors.white,
+                          size: 21.w,
+                        ),
                       ),
                     ),
                     SizedBox(width: 14.w),
                     Text(
                       "\$20",
                       style: AppTextStyles.segoeUiRegular18.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xff20D0C4)),
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xff20D0C4),
+                      ),
                     ),
                   ],
                 ),

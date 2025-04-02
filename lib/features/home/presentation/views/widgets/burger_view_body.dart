@@ -7,8 +7,15 @@ import 'package:task/features/home/domain/entities/ingredient_entity.dart';
 import 'package:task/features/home/presentation/views/widgets/gradient_button.dart';
 import 'package:task/features/home/presentation/views/widgets/ingredients_item.dart';
 
-class BurgerViewBody extends StatelessWidget {
+class BurgerViewBody extends StatefulWidget {
   const BurgerViewBody({super.key});
+
+  @override
+  State<BurgerViewBody> createState() => _BurgerViewBodyState();
+}
+
+class _BurgerViewBodyState extends State<BurgerViewBody> {
+  bool isFavorited = false;
 
   @override
   Widget build(BuildContext context) {
@@ -38,9 +45,15 @@ class BurgerViewBody extends StatelessWidget {
                   backgroundColor: Colors.red,
                   radius: 25.r,
                   child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.favorite_outline_rounded,
+                    onPressed: () {
+                      setState(() {
+                        isFavorited = !isFavorited;
+                      });
+                    },
+                    icon: Icon(
+                      isFavorited
+                          ? Icons.favorite_rounded
+                          : Icons.favorite_outline_rounded,
                       color: Colors.white,
                       size: 25,
                     ),
@@ -109,7 +122,7 @@ class BurgerViewBody extends StatelessWidget {
                       "nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam "
                       "erat, sed diam voluptua. At vero eos et accusam et justo duo dolores",
                       style: AppTextStyles.segoeUiRegular11.copyWith(
-                        color: AppColors.primaryText.withOpacity(0.8),
+                        color: AppColors.primaryText.withValues(alpha: .8),
                       ),
                     ),
                     SizedBox(height: 20.h),
@@ -146,7 +159,7 @@ class BurgerViewBody extends StatelessWidget {
                       ),
                     ),
                     Divider(
-                      color: AppColors.primaryText.withOpacity(0.2),
+                      color: AppColors.primaryText.withValues(alpha: .2),
                       thickness: 1,
                     ),
                     Padding(

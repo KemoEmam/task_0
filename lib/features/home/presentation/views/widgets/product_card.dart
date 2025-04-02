@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
+import 'package:task/core/router/routes.dart';
 import 'package:task/core/themes/styles/app_colors.dart';
 import 'package:task/core/themes/styles/app_text_styles.dart';
 import 'package:task/features/home/domain/entities/item_entity.dart';
@@ -14,7 +16,7 @@ class ProductCard extends StatefulWidget {
     super.key,
     required this.product,
     this.widthFactor = 1.0,
-    this.heightFactor = 1.0, // Default height factor
+    this.heightFactor = 1.0,
   });
 
   @override
@@ -87,9 +89,8 @@ class _ProductCardState extends State<ProductCard> {
                           ),
                           Text(
                             widget.product.description,
-                            style: AppTextStyles.segoeUiLight7.copyWith(
-                              color: AppColors.secondaryText,
-                            ),
+                            style: AppTextStyles.segoeUiLight7
+                                .copyWith(color: Colors.grey[900]),
                           ),
                           SizedBox(height: 4.h),
                           Text(
@@ -111,7 +112,9 @@ class _ProductCardState extends State<ProductCard> {
                             radius: 13.r,
                             backgroundColor: Colors.white,
                             child: IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                context.push(Routes.burger);
+                              },
                               icon: Icon(
                                 size: 12.w,
                                 Icons.arrow_forward_ios_outlined,

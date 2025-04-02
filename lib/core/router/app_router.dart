@@ -16,7 +16,6 @@ final router = GoRouter(
     body: Center(child: Text('Oops! Page not found')),
   ),
   routes: [
-    // Stateful Shell Navigation (Persistent Bottom Nav Bar)
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) =>
           NavigationBarLayout(shell: navigationShell),
@@ -46,6 +45,10 @@ final router = GoRouter(
           ],
         ),
       ],
+    ),
+    GoRoute(
+      path: Routes.burger,
+      builder: (context, state) => const BurgerView(),
     ),
   ],
 );
