@@ -60,8 +60,6 @@ lib/
 - **SetState for State Management**
 - **Smooth Navigation** between screens
 
-## Screenshots
-(You can add screenshots here to showcase the UI)
 
 ## Notes
 - The UI follows the provided design closely.
