@@ -1,17 +1,68 @@
-# task
+# Flutter UI Task
 
-A new Flutter project.
+This repository contains the Flutter implementation of a UI task featuring three screens: Home, Cart, and Burger Item views. The task was completed as part of a technical assessment.
 
-## Getting Started
+## Live Demo
+https://github.com/user-attachments/assets/106e7a76-7a5d-4bb6-9ac1-5e9d20d52e82
 
-This project is a starting point for a Flutter application.
+## Screens Implemented
+1. **Home Screen**: Displays a list of burgers available for selection.
+2. **Cart Screen**: Shows the items added to the cart with their details.
+3. **Burger Item Screen**: Displays detailed information about a selected item.
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Stack
+- **Flutter** 
+- **Dart**
+- **SetState** for state management
+- **Flutter Widgets & Material Design**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# task_0
+Clone the repository:
+```sh
+git clone https://github.com/yourusername/flutter-ui-task.git
+cd flutter-ui-task
+```
+
+Get dependencies:
+```sh
+flutter pub get
+```
+
+Run the app:
+```sh
+flutter run
+```
+
+## Folder Structure
+```
+lib/
+│── main.dart
+│── core/
+│   ├── theme.dart
+│   ├── constants.dart
+│── domain/
+│   ├── models/
+│── presentation/
+│   ├── home/
+│   │   ├── home_screen.dart
+│   │   ├── widgets/
+│   ├── cart/
+│   │   ├── cart_screen.dart
+│   ├── burger_item/
+│   │   ├── burger_item_screen.dart
+│── widgets/
+```
+
+## Features Implemented
+- **Responsive UI** for different screen sizes
+- **Reusable Widgets** for consistency
+- **SetState for State Management**
+- **Smooth Navigation** between screens
+
+## Screenshots
+(You can add screenshots here to showcase the UI)
+
+## Notes
+- The UI follows the provided design closely.
+- Dummy data is used for now.
