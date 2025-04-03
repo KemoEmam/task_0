@@ -7,24 +7,10 @@ import 'package:task/features/home/domain/entities/ingredient_entity.dart';
 import 'package:task/features/home/presentation/views/widgets/gradient_button.dart';
 import 'package:task/features/home/presentation/views/widgets/ingredients_item.dart';
 
-<<<<<<< HEAD
-class BurgerViewBody extends StatefulWidget {
-  const BurgerViewBody({super.key});
-
-  @override
-  State<BurgerViewBody> createState() => _BurgerViewBodyState();
-}
-
-class _BurgerViewBodyState extends State<BurgerViewBody> {
-  bool isFavorited = false;
-
-  @override
-=======
 class BurgerViewBody extends StatelessWidget {
   const BurgerViewBody({super.key});
 
   @override
->>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
@@ -52,21 +38,9 @@ class BurgerViewBody extends StatelessWidget {
                   backgroundColor: Colors.red,
                   radius: 25.r,
                   child: IconButton(
-<<<<<<< HEAD
-                    onPressed: () {
-                      setState(() {
-                        isFavorited = !isFavorited;
-                      });
-                    },
-                    icon: Icon(
-                      isFavorited
-                          ? Icons.favorite_rounded
-                          : Icons.favorite_outline_rounded,
-=======
                     onPressed: () {},
                     icon: const Icon(
                       Icons.favorite_outline_rounded,
->>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
                       color: Colors.white,
                       size: 25,
                     ),
@@ -135,11 +109,7 @@ class BurgerViewBody extends StatelessWidget {
                       "nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam "
                       "erat, sed diam voluptua. At vero eos et accusam et justo duo dolores",
                       style: AppTextStyles.segoeUiRegular11.copyWith(
-<<<<<<< HEAD
                         color: AppColors.primaryText.withValues(alpha: .8),
-=======
-                        color: AppColors.primaryText.withOpacity(0.8),
->>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
                       ),
                     ),
                     SizedBox(height: 20.h),
@@ -176,11 +146,7 @@ class BurgerViewBody extends StatelessWidget {
                       ),
                     ),
                     Divider(
-<<<<<<< HEAD
                       color: AppColors.primaryText.withValues(alpha: .2),
-=======
-                      color: AppColors.primaryText.withOpacity(0.2),
->>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
                       thickness: 1,
                     ),
                     Padding(

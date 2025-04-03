@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-<<<<<<< HEAD
-import 'package:go_router/go_router.dart';
-import 'package:task/core/router/routes.dart';
-=======
->>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
 import 'package:task/core/themes/styles/app_colors.dart';
 import 'package:task/core/themes/styles/app_text_styles.dart';
 import 'package:task/features/home/domain/entities/item_entity.dart';
@@ -19,11 +14,7 @@ class ProductCard extends StatefulWidget {
     super.key,
     required this.product,
     this.widthFactor = 1.0,
-<<<<<<< HEAD
-    this.heightFactor = 1.0,
-=======
     this.heightFactor = 1.0, // Default height factor
->>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
   });
 
   @override
@@ -96,14 +87,9 @@ class _ProductCardState extends State<ProductCard> {
                           ),
                           Text(
                             widget.product.description,
-<<<<<<< HEAD
-                            style: AppTextStyles.segoeUiLight7
-                                .copyWith(color: Colors.grey[900]),
-=======
                             style: AppTextStyles.segoeUiLight7.copyWith(
                               color: AppColors.secondaryText,
                             ),
->>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
                           ),
                           SizedBox(height: 4.h),
                           Text(
@@ -125,13 +111,7 @@ class _ProductCardState extends State<ProductCard> {
                             radius: 13.r,
                             backgroundColor: Colors.white,
                             child: IconButton(
-<<<<<<< HEAD
-                              onPressed: () {
-                                context.push(Routes.burger);
-                              },
-=======
                               onPressed: () {},
->>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
                               icon: Icon(
                                 size: 12.w,
                                 Icons.arrow_forward_ios_outlined,

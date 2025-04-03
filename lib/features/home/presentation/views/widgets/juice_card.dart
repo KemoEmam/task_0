@@ -84,14 +84,9 @@ class _JuiceProductCardState extends State<JuiceProductCard> {
                         ),
                         Text(
                           widget.juice.description,
-<<<<<<< HEAD
-                          style: AppTextStyles.segoeUiLight7
-                              .copyWith(color: Colors.grey[900]),
-=======
                           style: AppTextStyles.segoeUiLight7.copyWith(
                             color: AppColors.secondaryText,
                           ),
->>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
                           overflow: TextOverflow.ellipsis,
                           maxLines: 2,
                         ),
@@ -132,19 +127,11 @@ class _JuiceProductCardState extends State<JuiceProductCard> {
           // Floating Image
           Positioned(
             left: 10.w,
-<<<<<<< HEAD
-            bottom: 84.h,
-            child: Image.asset(
-              widget.juice.image,
-              height: 101.h,
-              width: 101.w,
-=======
             bottom: 85.h, // Moves the image below the card
             child: Image.asset(
               widget.juice.image,
               height: 100.h,
               width: 100.w,
->>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
               fit: BoxFit.cover,
             ),
           ),

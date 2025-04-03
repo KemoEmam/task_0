@@ -14,11 +14,7 @@ class CustomSearchBar extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.transparent,
           borderRadius: BorderRadius.circular(15.r),
-<<<<<<< HEAD
-          border: Border.all(color: Colors.grey[300]!),
-=======
           border: Border.all(color: Colors.grey[300]!), // Light grey outline
->>>>>>> f82daa790f04c5c5e5954d71db6fe5c40a524d4d
         ),
         child: Row(
           children: [
